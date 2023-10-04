@@ -16,7 +16,7 @@ ChatStr = ""
 def chat(user_query):
     global ChatStr
     openai.api_key = apikey
-    ChatStr += f"Anuj: {user_query}\n Jarvis:"
+    ChatStr += f"Your_Name: {user_query}\n Jarvis:"
     messages = [
         {"role": "system", "content": "You are helpful"},
         {"role": "user", "content": ChatStr}
@@ -167,5 +167,5 @@ if __name__ == '__main__':
             description = input("Please type the description of the event")
             create_calendar_event(title, start_time, end_time, description)
         else:
-            print("You are talking A.I. Desktop Assistant developed by Anuj")
+            print("You are talking A.I. Desktop Assistant developed by YourName")
             chat(query)
